@@ -12,6 +12,7 @@ function LoginForm({ onLogin }) {
     setIsLoading(true);
     fetch("/login", {
       method: "POST",
+      credentials: "include",
       headers: {
         "Content-Type": "application/json",
       },
@@ -21,7 +22,7 @@ function LoginForm({ onLogin }) {
       if (r.ok) {
         r.json().then((user) => onLogin(user));
       } else {
-        r.json().then((err) => setErrors(err.errors));
+        r.json().then((err) => setErrors([err.error]));
       }
     });
   }

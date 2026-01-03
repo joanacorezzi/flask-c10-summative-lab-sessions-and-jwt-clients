@@ -1,0 +1,4 @@
+
+# ignore sqlite db + instance folder
+server/instance/
+*.db

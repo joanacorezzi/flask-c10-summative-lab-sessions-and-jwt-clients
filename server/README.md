@@ -1,7 +1,8 @@
-# Productivity App Backend
 
 ## Description
 Flask API with session and JWT authentication that allows users to manage personal notes.
+Users can sign up, log in, stay logged in via sessions, and perform CRUD actions on their own notes.
+
 
 ## Setup
 pipenv install  
